@@ -518,6 +518,11 @@ video {
   .ellipse-icon:hover svg path {
     fill: #f3f4f6;
   }
+
+  .active {
+    --tw-text-opacity: 1;
+    color: rgb(243 244 246 / var(--tw-text-opacity));
+  }
 }
 
 .absolute {
@@ -582,6 +587,10 @@ video {
 
 .max-w-6xl {
   max-width: 72rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .grid-rows-6 {
@@ -692,6 +701,14 @@ video {
   padding-bottom: 1rem;
 }
 
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
 .font-rubik {
   font-family: Rubik, sans-serif;
 }
@@ -739,6 +756,16 @@ video {
 .ring-white {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.delay-100 {
+  transition-delay: 100ms;
 }
 
 @media (min-width: 1440px) {
@@ -867,5 +894,19 @@ video {
 
   .desktop\:font-bold {
     font-weight: 700;
+  }
+
+  .desktop\:text-gray-100 {
+    --tw-text-opacity: 1;
+    color: rgb(243 244 246 / var(--tw-text-opacity));
+  }
+
+  .desktop\:hover\:cursor-pointer:hover {
+    cursor: pointer;
+  }
+
+  .desktop\:hover\:text-gray-100:hover {
+    --tw-text-opacity: 1;
+    color: rgb(243 244 246 / var(--tw-text-opacity));
   }
 }

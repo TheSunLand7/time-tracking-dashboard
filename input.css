@@ -10,5 +10,9 @@
 		.ellipse-icon:hover svg path {
 			@apply fill-gray-100;
 		}
+
+		.active {
+			@apply text-gray-100;
+		}
 	}
 }
