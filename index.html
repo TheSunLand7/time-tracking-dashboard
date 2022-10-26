@@ -13,108 +13,134 @@
 		<title>Frontend Mentor | Time Tracking</title>
 	</head>
 	<body>
-    <main>
-      <div>
-        <!--User-->
-        <div>
-          <div>
-            <picture>
-              <img src="/images/image-jeremy.png" alt="photo-user">
-            </picture>
-            <div>
-              <small>Report for</small>
-              <span>Jeremy Robson</span>
-            </div>
-          </div>
-          <div>
-            <span>Daily</span>
-            <span>Weekly</span>
-            <span>Monthly</span>
-          </div>        
-        </div>
-        <!--Information-->
-        <div>
-          <!--Work-->
-          <div>
-            <div>Insert svg</div>
-            <div>
-              <div>
-                <span>Work</span>
-                <div>Insert svg</div>
-              </div>
-              <div>
-                <span>32hrs</span>
-                <small>Last week - 36hrs</small>
+    <main class="w-full min-h-screen font-rubik">
+      <div class="w-full h-full bg-Very-dark-blue px-4 py-8"> 
+        <div class="w-full h-full flex flex-col space-y-6">
+          <!--User-->
+          <div class="bg-Dark-blue rounded-lg">
+            <div class="w-full h-auto p-8 flex bg-Blue rounded-lg items-center">
+              <picture class="mr-4">
+                <img src="/images/image-jeremy.png" alt="photo-user" class="w-14 h-14 ring-2 ring-white rounded-full">
+              </picture>
+              <div class="flex flex-col">
+                <small class="text-Pale-Blue">Report for</small>
+                <span class="text-gray-100 font-light text-xl">Jeremy Robson</span>
               </div>
             </div>
+            <div class="px-8 py-4 flex justify-between text-Desaturated-blue text-sm">
+              <span>Daily</span>
+              <span class="text-gray-100">Weekly</span>
+              <span>Monthly</span>
+            </div>        
           </div>
-          <!--Play-->
-          <div>
-            <div>Insert svg</div>
-            <div>
-              <div>
-                <span>Work</span>
-                <div>Insert svg</div>
+          <!--Information-->
+          <div class="grid grid-flow-row gap-6">
+            <!--Work-->
+            <div class="bg-Light-red-work rounded-lg h-[155px] relative overflow-hidden">
+              <div class="absolute w-14 h-14 right-3 -top-1">
+                <img src="/images/icon-work.svg" alt="icon work" class="w-full h-full">
               </div>
-              <div>
-                <span>32hrs</span>
-                <small>Last week - 36hrs</small>
+              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-100 text-sm">Work</span>
+                  <div>
+                    <img src="/images/icon-ellipsis.svg" alt="ellipsis icon">
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class=" text-gray-200 font-light text-xl">32hrs</span>
+                  <small class=" text-Pale-Blue">Last week - 36hrs</small>
+                </div>
               </div>
             </div>
-          </div>
-          <!--Study-->
-          <div>
-            <div>Insert svg</div>
-            <div>
-              <div>
-                <span>Work</span>
-                <div>Insert svg</div>
+            <!--Play-->
+            <div class="bg-Soft-blue-play rounded-lg h-[155px] relative overflow-hidden">
+              <div class="absolute w-14 h-14 right-3 -top-1">
+                <img src="/images/icon-play.svg" alt="icon work" class="w-full h-full">
               </div>
-              <div>
-                <span>32hrs</span>
-                <small>Last week - 36hrs</small>
-              </div>
-            </div>
-          </div>
-          <!--Exercise-->
-          <div>
-            <div>Insert svg</div>
-            <div>
-              <div>
-                <span>Work</span>
-                <div>Insert svg</div>
-              </div>
-              <div>
-                <span>32hrs</span>
-                <small>Last week - 36hrs</small>
+              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-100 text-sm">Play</span>
+                  <div>
+                    <img src="/images/icon-ellipsis.svg" alt="ellipsis icon">
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class=" text-gray-200 font-light text-xl">10hrs</span>
+                  <small class=" text-Pale-Blue">Last week - 8hrs</small>
+                </div>
               </div>
             </div>
-          </div>
-          <!--Social-->
-          <div>
-            <div>Insert svg</div>
-            <div>
-              <div>
-                <span>Work</span>
-                <div>Insert svg</div>
+            <!--Study-->
+            <div class="bg-Light-red-study rounded-lg h-[155px] relative overflow-hidden">
+              <div class="absolute w-14 h-14 right-3 -top-1">
+                <img src="/images/icon-study.svg" alt="icon work" class="w-full h-full">
               </div>
-              <div>
-                <span>32hrs</span>
-                <small>Last week - 36hrs</small>
+              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-100 text-sm">Study</span>
+                  <div>
+                    <img src="/images/icon-ellipsis.svg" alt="ellipsis icon">
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class=" text-gray-200 font-light text-xl">4hrs</span>
+                  <small class=" text-Pale-Blue">Last week - 7hrs</small>
+                </div>
               </div>
             </div>
-          </div>
-          <!--Self Care-->
-          <div>
-            <div>Insert svg</div>
-            <div>
-              <div>
-                <span>Work</span>
-                <div>Insert svg</div>
+            <!--Exercise-->
+            <div class="bg-Lime-green-exercise rounded-lg h-[155px] relative overflow-hidden">
+              <div class="absolute w-14 h-14 right-3 -top-1">
+                <img src="/images/icon-exercise.svg" alt="icon work" class="w-full h-full">
               </div>
-              <div>
-                <span>32hrs</span>
-                <small>Last week - 36hrs</small>
+              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-100 text-sm">Exercise</span>
+                  <div>
+                    <img src="/images/icon-ellipsis.svg" alt="ellipsis icon">
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class=" text-gray-200 font-light text-xl">4hrs</span>
+                  <small class=" text-Pale-Blue">Last week - 5hrs</small>
+                </div>
+              </div>
+            </div>
+            <!--Social-->
+            <div class="bg-Violet-social rounded-lg h-[155px] relative overflow-hidden">
+              <div class="absolute w-14 h-14 right-3 -top-1">
+                <img src="/images/icon-social.svg" alt="icon work" class="w-full h-full">
+              </div>
+              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-100 text-sm">Social</span>
+                  <div>
+                    <img src="/images/icon-ellipsis.svg" alt="ellipsis icon">
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class=" text-gray-200 font-light text-xl">5hrs</span>
+                  <small class=" text-Pale-Blue">Last week - 10hrs</small>
+                </div>
+              </div>
+            </div>
+            <!--Self Care-->
+            <div class="bg-Light-red-work rounded-lg h-[155px] relative overflow-hidden">
+              <div class="absolute w-14 h-14 right-3 -top-1">
+                <img src="/images/icon-self-care.svg" alt="icon work">
+              </div>
+              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-100 text-sm">Self Care</span>
+                  <div>
+                    <img src="/images/icon-ellipsis.svg" alt="ellipsis icon" class="w-full h-full">
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class=" text-gray-200 font-light text-xl">2hrs</span>
+                  <small class=" text-Pale-Blue">Last week - 2hrs</small>
+                </div>
               </div>
             </div>
           </div>
