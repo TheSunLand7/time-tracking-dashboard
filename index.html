@@ -13,133 +13,134 @@
 		<title>Frontend Mentor | Time Tracking</title>
 	</head>
 	<body>
-    <main class="w-full min-h-screen font-rubik">
-      <div class="w-full h-full bg-Very-dark-blue px-4 py-8"> 
-        <div class="w-full h-full flex flex-col space-y-6">
+    <main class="w-full min-h-screen font-rubik bg-Very-dark-blue">
+      <div class="w-full h-full px-4 py-8 flex desktop:justify-center desktop:items-center desktop:h-screen"> 
+        <div class="w-full h-full flex flex-col space-y-6 max-w-6xl desktop:flex-row desktop:space-y-0 desktop:space-x-6 desktop:max-h-[500px]">
           <!--User-->
-          <div class="bg-Dark-blue rounded-lg">
-            <div class="w-full h-auto p-8 flex bg-Blue rounded-lg items-center">
-              <picture class="mr-4">
-                <img src="/images/image-jeremy.png" alt="photo-user" class="w-14 h-14 ring-2 ring-white rounded-full">
+          <div class="bg-Dark-blue rounded-lg desktop:flex desktop:flex-col">
+            <div class="w-full h-auto p-8 flex bg-Blue rounded-lg items-center desktop:flex-col desktop:w-auto desktop:space-y-8 desktop:pb-20">
+              <picture class="mr-4 desktop:w-full">
+                <img src="/images/image-jeremy.png" alt="photo-user" class="w-14 h-14 ring-2 ring-white rounded-full desktop:w-20 desktop:h-20">
               </picture>
               <div class="flex flex-col">
-                <small class="text-Pale-Blue">Report for</small>
-                <span class="text-gray-100 font-light text-xl">Jeremy Robson</span>
+                <small class="text-Pale-Blue text-xm">Report for</small>
+                <span class="text-gray-100 font-light text-xl desktop:text-4xl">Jeremy Robson</span>
               </div>
             </div>
-            <div class="px-8 py-4 flex justify-between text-Desaturated-blue text-sm">
+            <div class="px-8 py-4 flex justify-between text-Desaturated-blue text-sm desktop:flex-col h-full desktop:py-8 desktop:text-base">
               <span>Daily</span>
               <span class="text-gray-100">Weekly</span>
               <span>Monthly</span>
             </div>        
           </div>
           <!--Information-->
-          <div class="grid grid-flow-row gap-6">
+          <div class="grid grid-rows-6 gap-6 desktop:grid-rows-2 desktop:grid-cols-3 w-full">
             <!--Work-->
-            <div class="bg-Light-red-work rounded-lg h-[155px] relative overflow-hidden">
-              <div class="absolute w-14 h-14 right-3 -top-1">
+            <div class="bg-Light-red-work rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
+              <div class="absolute w-14 h-14 right-3 -top-1 desktop:w-20 desktop:h-20">
                 <img src="/images/icon-work.svg" alt="icon work" class="w-full h-full">
               </div>
-              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2">
+              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6 desktop:px-8">
                 <div class="flex justify-between items-center">
-                  <span class="text-gray-100 text-sm">Work</span>
-                  <div>
-                    <img src="/images/icon-ellipsis.svg" alt="ellipsis icon">
+                  <span class="text-gray-100 text-sm desktop:font-bold desktop:text-base">Work</span>
+                  <div class="ellipse-icon">
+                    <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+                    </svg>
                   </div>
                 </div>
-                <div class="flex justify-between items-center">
-                  <span class=" text-gray-200 font-light text-xl">32hrs</span>
-                  <small class=" text-Pale-Blue">Last week - 36hrs</small>
+                <div class="flex justify-between items-center desktop:flex-col desktop:items-start desktop:space-y-2">
+                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl">32hrs</span>
+                  <small class=" text-Pale-Blue desktop:text-base">Last week - 36hrs</small>
                 </div>
               </div>
             </div>
             <!--Play-->
-            <div class="bg-Soft-blue-play rounded-lg h-[155px] relative overflow-hidden">
-              <div class="absolute w-14 h-14 right-3 -top-1">
+            <div class="bg-Soft-blue-play rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
+              <div class="absolute w-14 h-14 right-3 -top-1 desktop:w-20 desktop:h-20">
                 <img src="/images/icon-play.svg" alt="icon work" class="w-full h-full">
               </div>
-              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2">
+              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6 desktop:px-8">
                 <div class="flex justify-between items-center">
-                  <span class="text-gray-100 text-sm">Play</span>
-                  <div>
-                    <img src="/images/icon-ellipsis.svg" alt="ellipsis icon">
+                  <span class="text-gray-100 text-sm desktop:font-bold desktop:text-base">Play</span>
+                  <div class="ellipse-icon">
+                    <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
                   </div>
                 </div>
-                <div class="flex justify-between items-center">
-                  <span class=" text-gray-200 font-light text-xl">10hrs</span>
-                  <small class=" text-Pale-Blue">Last week - 8hrs</small>
+                <div class="flex justify-between items-center desktop:flex-col desktop:items-start desktop:space-y-2">
+                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl">10hrs</span>
+                  <small class=" text-Pale-Blue desktop:text-base">Last week - 8hrs</small>
                 </div>
               </div>
             </div>
             <!--Study-->
-            <div class="bg-Light-red-study rounded-lg h-[155px] relative overflow-hidden">
-              <div class="absolute w-14 h-14 right-3 -top-1">
+            <div class="bg-Light-red-study rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
+              <div class="absolute w-14 h-14 right-3 -top-1 desktop:w-20 desktop:h-20">
                 <img src="/images/icon-study.svg" alt="icon work" class="w-full h-full">
               </div>
-              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2">
+              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6 desktop:px-8">
                 <div class="flex justify-between items-center">
-                  <span class="text-gray-100 text-sm">Study</span>
-                  <div>
-                    <img src="/images/icon-ellipsis.svg" alt="ellipsis icon">
+                  <span class="text-gray-100 text-sm desktop:font-bold desktop:text-base">Study</span>
+                  <div class="ellipse-icon">
+                    <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
                   </div>
                 </div>
-                <div class="flex justify-between items-center">
-                  <span class=" text-gray-200 font-light text-xl">4hrs</span>
-                  <small class=" text-Pale-Blue">Last week - 7hrs</small>
+                <div class="flex justify-between items-center desktop:flex-col desktop:items-start desktop:space-y-2">
+                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl">4hrs</span>
+                  <small class=" text-Pale-Blue desktop:text-base">Last week - 7hrs</small>
                 </div>
               </div>
             </div>
             <!--Exercise-->
-            <div class="bg-Lime-green-exercise rounded-lg h-[155px] relative overflow-hidden">
-              <div class="absolute w-14 h-14 right-3 -top-1">
+            <div class="bg-Lime-green-exercise rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
+              <div class="absolute w-14 h-14 right-3 -top-1 desktop:w-20 desktop:h-20">
                 <img src="/images/icon-exercise.svg" alt="icon work" class="w-full h-full">
               </div>
-              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2">
+              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6 desktop:px-8">
                 <div class="flex justify-between items-center">
-                  <span class="text-gray-100 text-sm">Exercise</span>
-                  <div>
-                    <img src="/images/icon-ellipsis.svg" alt="ellipsis icon">
+                  <span class="text-gray-100 text-sm desktop:font-bold desktop:text-base">Exercise</span>
+                  <div class="ellipse-icon">
+                    <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
                   </div>
                 </div>
-                <div class="flex justify-between items-center">
-                  <span class=" text-gray-200 font-light text-xl">4hrs</span>
-                  <small class=" text-Pale-Blue">Last week - 5hrs</small>
+                <div class="flex justify-between items-center desktop:flex-col desktop:items-start desktop:space-y-2">
+                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl">4hrs</span>
+                  <small class=" text-Pale-Blue desktop:text-base">Last week - 5hrs</small>
                 </div>
               </div>
             </div>
             <!--Social-->
-            <div class="bg-Violet-social rounded-lg h-[155px] relative overflow-hidden">
-              <div class="absolute w-14 h-14 right-3 -top-1">
+            <div class="bg-Violet-social rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
+              <div class="absolute w-14 h-14 right-3 -top-1 desktop:w-20 desktop:h-20">
                 <img src="/images/icon-social.svg" alt="icon work" class="w-full h-full">
               </div>
-              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2">
+              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6 desktop:px-8">
                 <div class="flex justify-between items-center">
-                  <span class="text-gray-100 text-sm">Social</span>
-                  <div>
-                    <img src="/images/icon-ellipsis.svg" alt="ellipsis icon">
+                  <span class="text-gray-100 text-sm desktop:font-bold desktop:text-base">Social</span>
+                  <div class="ellipse-icon">
+                    <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
                   </div>
                 </div>
-                <div class="flex justify-between items-center">
-                  <span class=" text-gray-200 font-light text-xl">5hrs</span>
-                  <small class=" text-Pale-Blue">Last week - 10hrs</small>
+                <div class="flex justify-between items-center desktop:flex-col desktop:items-start desktop:space-y-2">
+                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl">5hrs</span>
+                  <small class=" text-Pale-Blue desktop:text-base">Last week - 10hrs</small>
                 </div>
               </div>
             </div>
             <!--Self Care-->
-            <div class="bg-Light-red-work rounded-lg h-[155px] relative overflow-hidden">
-              <div class="absolute w-14 h-14 right-3 -top-1">
+            <div class="bg-Light-red-work rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
+              <div class="absolute w-14 h-14 right-3 -top-1 desktop:w-20 desktop:h-20">
                 <img src="/images/icon-self-care.svg" alt="icon work">
               </div>
-              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2">
+              <div class="bg-Dark-blue rounded-lg px-4 py-8 absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6 desktop:px-8">
                 <div class="flex justify-between items-center">
-                  <span class="text-gray-100 text-sm">Self Care</span>
-                  <div>
-                    <img src="/images/icon-ellipsis.svg" alt="ellipsis icon" class="w-full h-full">
+                  <span class="text-gray-100 text-sm desktop:font-bold desktop:text-base">Self Care</span>
+                  <div class="ellipse-icon">
+                    <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
                   </div>
                 </div>
-                <div class="flex justify-between items-center">
-                  <span class=" text-gray-200 font-light text-xl">2hrs</span>
-                  <small class=" text-Pale-Blue">Last week - 2hrs</small>
+                <div class="flex justify-between items-center desktop:flex-col desktop:items-start desktop:space-y-2">
+                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl">2hrs</span>
+                  <small class=" text-Pale-Blue desktop:text-base">Last week - 2hrs</small>
                 </div>
               </div>
             </div>

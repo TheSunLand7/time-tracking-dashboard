@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	@screen desktop {
+		.ellipse-icon {
+			@apply hover:cursor-pointer;
+		}
+		.ellipse-icon:hover svg path {
+			@apply fill-gray-100;
+		}
+	}
+}
