@@ -1,16 +1,21 @@
 import "./style.css";
 import data from "./data.json";
 
+/** ### VARIABLES ### */
 const $time = document.querySelectorAll(".time") as NodeListOf<HTMLDivElement>,
-	//$day = document.querySelector("#daily") as HTMLSpanElement,
-	//$week = document.querySelector("#weekly") as HTMLSpanElement,
-	//$month = document.querySelector("#monthly") as HTMLSpanElement,
 	$freq = document.querySelectorAll(".frequence") as NodeListOf<HTMLSpanElement>,
 	$currentSchedule = document.querySelectorAll(
 		".schedule .time span"
 	) as NodeListOf<HTMLSpanElement>,
-	$pastSchedule = document.querySelectorAll(".schedule .time small"),
-	$task = document.querySelectorAll(".schedule  .text-gray-100");
+	$pastSchedule = document.querySelectorAll(".schedule .time small") as NodeListOf<Element>,
+	$task = document.querySelectorAll(".schedule  .text-gray-100") as NodeListOf<HTMLSpanElement>;
+
+interface FrequenceInt {
+	freq: NodeListOf<HTMLSpanElement>;
+	task: NodeListOf<HTMLSpanElement>;
+	pastTime: NodeListOf<Element>;
+	currentTime: NodeListOf<HTMLSpanElement>;
+}
 
 /** ### INITIAL VALUES FOR WEEKLY */
 $task.forEach((hour) => {
@@ -34,7 +39,7 @@ const hoverElement = (data: NodeListOf<HTMLDivElement>) => {
 	});
 };
 
-/**### FREQUENCE FUNCTION ### */
+/** ### CURRENT SCHEDULE */
 const showActive = (freqs: HTMLSpanElement) => {
 	$freq.forEach((item) => {
 		if (item.classList.contains("active")) item.classList.remove("active");
@@ -42,32 +47,32 @@ const showActive = (freqs: HTMLSpanElement) => {
 	freqs.classList.add("active");
 };
 
-const frequences = (freq: NodeListOf<HTMLSpanElement>) => {
+/**### TIME SCHEDULE FOR EACH FREQ ### */
+const frequences = (datos: FrequenceInt) => {
+	const { freq, task, currentTime, pastTime } = datos;
 	freq.forEach((item) => {
 		if (item.id === "daily") {
 			item.addEventListener("click", () => {
 				showActive(item);
-				//showData($currentSchedule, $pastSchedule);
-				$task.forEach((hour) => {
-					let task: number = data.map((item) => item.title).indexOf(hour.textContent!); //0
-					$currentSchedule.item(
+				task.forEach((hour) => {
+					let task: number = data.map((item) => item.title).indexOf(hour.textContent!); //task's index
+					currentTime.item(
 						task
 					).textContent = `${data[task].timeframes.daily.current}hrs`;
-					$pastSchedule.item(
+					pastTime.item(
 						task
-					).textContent = `Last week - ${data[task].timeframes.daily.previous}hrs`;
+					).textContent = `Yesterday - ${data[task].timeframes.daily.previous}hrs`;
 				});
 			});
 		} else if (item.id === "weekly") {
 			item.addEventListener("click", () => {
 				showActive(item);
-				//showData($currentSchedule, $pastSchedule);
-				$task.forEach((hour) => {
+				task.forEach((hour) => {
 					let task: number = data.map((item) => item.title).indexOf(hour.textContent!); //0
-					$currentSchedule.item(
+					currentTime.item(
 						task
 					).textContent = `${data[task].timeframes.weekly.current}hrs`;
-					$pastSchedule.item(
+					pastTime.item(
 						task
 					).textContent = `Last week - ${data[task].timeframes.weekly.previous}hrs`;
 				});
@@ -75,33 +80,26 @@ const frequences = (freq: NodeListOf<HTMLSpanElement>) => {
 		} else if (item.id === "monthly") {
 			item.addEventListener("click", () => {
 				showActive(item);
-				//showData($currentSchedule, $pastSchedule);
-				$task.forEach((hour) => {
+				task.forEach((hour) => {
 					let task: number = data.map((item) => item.title).indexOf(hour.textContent!); //0
-					$currentSchedule.item(
+					currentTime.item(
 						task
 					).textContent = `${data[task].timeframes.monthly.current}hrs`;
-					$pastSchedule.item(
+					pastTime.item(
 						task
-					).textContent = `Last week - ${data[task].timeframes.monthly.previous}hrs`;
+					).textContent = `Last month - ${data[task].timeframes.monthly.previous}hrs`;
 				});
 			});
 		}
 	});
 };
 
-/** ### SHOW DATA ### */
-/*const showData = (current: NodeListOf<HTMLSpanElement>, past: NodeListOf<Element>) => {
-	$task.forEach((hour) => {
-		let task: number = data.map((item) => item.title).indexOf(hour.textContent!); //0
-		current.item(task).textContent = `${data[task].timeframes.daily.current}hrs`;
-		past.item(task).textContent = `Last week - ${data[task].timeframes.daily.previous}hrs`;
-	});
-};
-*/
 window.onload = () => {
 	hoverElement($time);
-	frequences($freq);
-	//showData($currentSchedule, $pastSchedule);
+	frequences({
+		freq: $freq,
+		task: $task,
+		currentTime: $currentSchedule,
+		pastTime: $pastSchedule,
+	});
 };
-console.log(data);
