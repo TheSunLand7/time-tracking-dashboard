@@ -518,11 +518,6 @@ video {
   .ellipse-icon:hover svg path {
     fill: #f3f4f6;
   }
-
-  .active {
-    --tw-text-opacity: 1;
-    color: rgb(243 244 246 / var(--tw-text-opacity));
-  }
 }
 
 .absolute {
@@ -894,11 +889,6 @@ video {
 
   .desktop\:font-bold {
     font-weight: 700;
-  }
-
-  .desktop\:text-gray-100 {
-    --tw-text-opacity: 1;
-    color: rgb(243 244 246 / var(--tw-text-opacity));
   }
 
   .desktop\:hover\:cursor-pointer:hover {

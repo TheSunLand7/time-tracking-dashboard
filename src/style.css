@@ -15,3 +15,6 @@
 .work-bg {
 	background-color: var(--Desaturated-blue);
 }
+.active {
+	color: white;
+}

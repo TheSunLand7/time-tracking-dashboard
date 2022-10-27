@@ -27,16 +27,16 @@
                 <span class="text-gray-100 font-light text-xl desktop:text-4xl">Jeremy Robson</span>
               </div>
             </div>
-            <div class="px-8 py-4 flex justify-between text-Desaturated-blue text-sm desktop:flex-col h-full desktop:py-8 desktop:text-base">
-              <span class="desktop:hover:text-gray-100 desktop:hover:cursor-pointer">Daily</span>
-              <span class="active desktop:text-gray-100 desktop:hover:cursor-pointer">Weekly</span>
-              <span class="desktop:hover:text-gray-100 desktop:hover:cursor-pointer">Monthly</span>
+            <div class="px-8 py-4 flex justify-between text-Desaturated-blue text-sm desktop:flex-col h-full desktop:py-8 desktop:text-base desktop:items-start">
+              <span class="desktop:hover:text-gray-100 desktop:hover:cursor-pointer frequence" id="daily">Daily</span>
+              <span class="desktop:hover:text-gray-100 desktop:hover:cursor-pointer frequence active" id="weekly">Weekly</span>
+              <span class="desktop:hover:text-gray-100 desktop:hover:cursor-pointer frequence" id="monthly">Monthly</span>
             </div>        
           </div>
           <!--Information-->
           <div class="grid grid-rows-6 gap-6 desktop:grid-rows-2 desktop:grid-cols-3 w-full">
             <!--Work-->
-            <div class="bg-Light-red-work rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
+            <div class="schedule bg-Light-red-work rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
               <div class="absolute w-14 h-14 right-3 -top-1 desktop:w-20 desktop:h-20">
                 <img src="/images/icon-work.svg" alt="icon work" class="w-full h-full">
               </div>
@@ -49,17 +49,17 @@
                   </div>
                 </div>
                 <div class="flex justify-between items-center desktop:flex-col desktop:items-start desktop:space-y-2 desktop:px-8 px-4 pb-8 desktop:hover: cursor-pointer time">
-                  <span class="text-gray-200 font-light text-xl desktop:text-5xl">32hrs</span>
-                  <small class="text-Pale-Blue desktop:text-base">Last week - 36hrs</small>
+                  <span class="text-gray-200 font-light text-xl desktop:text-5xl"></span>
+                  <small class="text-Pale-Blue desktop:text-base"></small>
                 </div>
               </div>
             </div>
             <!--Play-->
-            <div class="bg-Soft-blue-play rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
+            <div class="schedule bg-Soft-blue-play rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
               <div class="absolute w-14 h-14 right-3 -top-1 desktop:w-20 desktop:h-20">
                 <img src="/images/icon-play.svg" alt="icon work" class="w-full h-full">
               </div>
-              <div class="bg-Dark-blue rounded-lg absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6">
+              <div class="bg-Dark-blue rounded-lg absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6 transition-colors delay-100">
                 <div class="flex justify-between items-center px-4 pt-8 desktop:px-8">
                   <span class="text-gray-100 text-sm desktop:font-bold desktop:text-base">Play</span>
                   <div class="ellipse-icon">
@@ -67,17 +67,17 @@
                   </div>
                 </div>
                 <div class="flex justify-between items-center desktop:flex-col desktop:items-start desktop:space-y-2 desktop:hover:cursor-pointer px-4 pb-8 desktop:px-8 time">
-                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl">10hrs</span>
-                  <small class=" text-Pale-Blue desktop:text-base">Last week - 8hrs</small>
+                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl"></span>
+                  <small class=" text-Pale-Blue desktop:text-base"></small>
                 </div>
               </div>
             </div>
             <!--Study-->
-            <div class="bg-Light-red-study rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
+            <div class="schedule bg-Light-red-study rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
               <div class="absolute w-14 h-14 right-3 -top-1 desktop:w-20 desktop:h-20">
                 <img src="/images/icon-study.svg" alt="icon work" class="w-full h-full">
               </div>
-              <div class="bg-Dark-blue rounded-lg absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6">
+              <div class="bg-Dark-blue rounded-lg absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6 transition-colors delay-100">
                 <div class="flex justify-between items-center px-4 pt-8 desktop:px-8">
                   <span class="text-gray-100 text-sm desktop:font-bold desktop:text-base">Study</span>
                   <div class="ellipse-icon">
@@ -85,17 +85,17 @@
                   </div>
                 </div>
                 <div class="flex justify-between items-center desktop:flex-col desktop:items-start desktop:space-y-2 desktop:hover:cursor-pointer px-4 pb-8 desktop:px-8 time">
-                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl">4hrs</span>
-                  <small class=" text-Pale-Blue desktop:text-base">Last week - 7hrs</small>
+                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl"></span>
+                  <small class=" text-Pale-Blue desktop:text-base"></small>
                 </div>
               </div>
             </div>
             <!--Exercise-->
-            <div class="bg-Lime-green-exercise rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
+            <div class="schedule bg-Lime-green-exercise rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
               <div class="absolute w-14 h-14 right-3 -top-1 desktop:w-20 desktop:h-20">
                 <img src="/images/icon-exercise.svg" alt="icon work" class="w-full h-full">
               </div>
-              <div class="bg-Dark-blue rounded-lg absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6">
+              <div class="bg-Dark-blue rounded-lg absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6 transition-colors delay-100">
                 <div class="flex justify-between items-center px-4 pt-8 desktop:px-8">
                   <span class="text-gray-100 text-sm desktop:font-bold desktop:text-base">Exercise</span>
                   <div class="ellipse-icon">
@@ -103,17 +103,17 @@
                   </div>
                 </div>
                 <div class="flex justify-between items-center desktop:flex-col desktop:items-start desktop:space-y-2 px-4 pb-8 desktop:hover:cursor-pointer desktop:px-8 time">
-                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl">4hrs</span>
-                  <small class=" text-Pale-Blue desktop:text-base">Last week - 5hrs</small>
+                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl"></span>
+                  <small class=" text-Pale-Blue desktop:text-base"></small>
                 </div>
               </div>
             </div>
             <!--Social-->
-            <div class="bg-Violet-social rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
+            <div class="schedule bg-Violet-social rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
               <div class="absolute w-14 h-14 right-3 -top-1 desktop:w-20 desktop:h-20">
                 <img src="/images/icon-social.svg" alt="icon work" class="w-full h-full">
               </div>
-              <div class="bg-Dark-blue rounded-lg absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6">
+              <div class="bg-Dark-blue rounded-lg absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6 transition-colors delay-100">
                 <div class="flex justify-between items-center px-4 pt-8 desktop:px-8">
                   <span class="text-gray-100 text-sm desktop:font-bold desktop:text-base">Social</span>
                   <div class="ellipse-icon">
@@ -121,17 +121,17 @@
                   </div>
                 </div>
                 <div class="flex justify-between items-center desktop:flex-col desktop:items-start desktop:space-y-2 px-4 pb-8 desktop:hover:cursor-pointer desktop:px-8 time">
-                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl">5hrs</span>
-                  <small class=" text-Pale-Blue desktop:text-base">Last week - 10hrs</small>
+                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl"></span>
+                  <small class=" text-Pale-Blue desktop:text-base"></small>
                 </div>
               </div>
             </div>
             <!--Self Care-->
-            <div class="bg-Light-red-work rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
+            <div class="schedule bg-Light-red-work rounded-lg h-[155px] relative overflow-hidden desktop:h-[238px]">
               <div class="absolute w-14 h-14 right-3 -top-1 desktop:w-20 desktop:h-20">
                 <img src="/images/icon-self-care.svg" alt="icon work">
               </div>
-              <div class="bg-Dark-blue rounded-lg absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6">
+              <div class="bg-Dark-blue rounded-lg absolute bottom-0 w-full space-y-2 desktop:h-auto desktop:space-y-6 transition-colors delay-100">
                 <div class="flex justify-between items-center px-4 pt-8 desktop:px-8">
                   <span class="text-gray-100 text-sm desktop:font-bold desktop:text-base">Self Care</span>
                   <div class="ellipse-icon">
@@ -139,8 +139,8 @@
                   </div>
                 </div>
                 <div class="flex justify-between items-center desktop:flex-col desktop:items-start desktop:space-y-2 px-4 pb-8 desktop:hover:cursor-pointer desktop:px-8 time">
-                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl">2hrs</span>
-                  <small class=" text-Pale-Blue desktop:text-base">Last week - 2hrs</small>
+                  <span class=" text-gray-200 font-light text-xl desktop:text-5xl"></span>
+                  <small class=" text-Pale-Blue desktop:text-base"></small>
                 </div>
               </div>
             </div>
